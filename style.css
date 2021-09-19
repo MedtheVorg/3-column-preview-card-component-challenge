@@ -1,0 +1,147 @@
+/* font-family: 'Lexend Deca', sans-serif;   400 */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* Big Shoulders Display  700 */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: var(--Transparent-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+main {
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.card img {
+  padding-left: 1rem;
+}
+.card .info {
+  padding: 2rem 1rem 3rem 1rem;
+  max-width: 250px;
+}
+
+.card .info h1 {
+  padding: 1rem 0rem;
+}
+.card .tag {
+  padding: 2rem 1rem;
+}
+
+.card h1 {
+  font-family: "Big Shoulders Display", "cursive";
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  overflow: hidden;
+}
+
+.card a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  /*transition: background 0.5s, color 0.5s, border 1s;*/
+}
+
+#sedans {
+  background: var(--Bright-orange);
+  border-radius: 10px 0% 0% 10px;
+}
+
+#sedans a {
+  color: var(--Bright-orange);
+}
+#suvs {
+  background: var(--Dark-cyan);
+}
+
+#suvs a {
+  color: var(--Dark-cyan);
+}
+
+#luxury {
+  background: var(--Very-dark-cyan);
+  border-radius: 0% 10px 10px 0%;
+}
+#luxury a {
+  color: var(--Very-dark-cyan);
+}
+
+#sedans a:hover {
+  background: var(--Bright-orange);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+#suvs a:hover {
+  background: var(--Dark-cyan);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+#luxury a:hover {
+  background: var(--Very-dark-cyan);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+@media (max-width: 850px) {
+  main {
+    flex-direction: column;
+  }
+  .card {
+    min-width: 200px;
+  }
+
+  .card:first-child {
+    border-radius: 10px 10px 0% 0% !important;
+  }
+  .card:last-child {
+    border-radius: 0% 0% 10px 10px !important;
+  }
+}
+
+.attribution {
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  text-align: center;
+}
